@@ -11,4 +11,10 @@ public class DateBuilder {
         return date.format(formatter);
     }
 
+    public String currentTime() {
+        ZonedDateTime date = ZonedDateTime.now().minusHours(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return date.format(formatter);
+    }
+
 }
